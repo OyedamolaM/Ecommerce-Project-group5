@@ -18,15 +18,19 @@
         <img src="images/logo2.jpeg" width="50px" alt="">
       </div>
       <nav>
-        <ul>
-          <li><a href=""></a>Home</li>
-          <li><a href=""></a>Product</li>
-          <li><a href=""></a>About</li>
-          <li><a href=""></a>Contact</li>
-          <li><a href=""></a>Account</li>
+        <ul id="MenuItems">
+          <li><a href="script.js">Home</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Account</a></li>
         </ul>
       </nav>
-      <a href="shopping.html"><i class="fa-solid fa-cart-shopping" style="color: #1e3050;"></i></a>
+      <a href="shopping.html"><i class="fa-solid fa-cart-shopping menu-icn" style="color: #1e3050;"></i></a>
+      <img src="images/nav.png" class="menu-icon" onclick="menutoggle()">
+
+      
+ 
     </div>
     <div class="row">
       <div class="col-2">
@@ -356,6 +360,10 @@
           <div class="footer-col-1">
 <h3>Download Our App</h3>
 <p>Download App for Andriod and ios mobile phone.</p>
+<div class="app-logo">
+  <img src="images/black play.png" alt="">
+  <img src="images/apple black.png" alt="">
+</div>
           </div>
           <div class="footer-col-2">
             <img src="images/logo2.jpeg" width="40px">
@@ -382,6 +390,28 @@
                                   </div>
 
         </div>
+        <hr>
+        <p class="copyright">Copyright 2024</p>
       </div>
     </div>
+
+    <!-- Js for toggle meun -->
+    <script>
+      
+  var MenuItems = document.getElementById("MenuItems");
+  MenuItems.style.maxHeight = "0px";
+
+  function menutoggle(){
+  if(MenuItems.style.maxHeight == "0px")
+    {
+      MenuItems.style.maxHeight = "200px";
+    }
+  else
+  {
+    MenuItems.style.maxHeight = "0px";
+  }
+  console.log(menutoggle());
+  } 
+  menutoggle()
+    </script>
 </body>
