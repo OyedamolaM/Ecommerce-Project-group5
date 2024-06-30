@@ -1,7 +1,21 @@
 body{
     position: relative;
 }
-
+.footer-rows{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.footer-logo{
+    font-weight: 800;
+    font-size: 30px
+}
+.footer-title{
+    font-weight: 600;
+}
+.resources{
+    float: right;
+}
 .glyphicon-star{
 color: rgb(227, 227, 54);
 }
@@ -137,14 +151,14 @@ button{
     height: 400px;
     position: relative;
 }
-.section-6 div{
+.form-container{
 width: 80%;
 height: 100px;
 background-color: black;
 border-radius: 1rem;
 position: absolute;
-top: 25%;
-left: 10%;
+top: 2%;
+left: 6%;
 z-index: +1;
 }
 .foot{
