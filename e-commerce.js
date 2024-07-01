@@ -26,7 +26,7 @@ newArrivals.forEach((product) => {
                        </div>
                        <div class="row">
                             <div class="col-md-12">
-                                <button>Add to cart</button>
+                                <button class="add-to-cart-button button-primary js-add-to-cart">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,6 @@ newArrivals.forEach((product) => {
 
             
 })
-console.log(NewArrivalHTML);
 
 document.querySelector('.new-arrivals-grid').innerHTML = NewArrivalHTML; 
 
@@ -73,7 +72,7 @@ topSelling.forEach((product) => {
                        </div>
                        <div class="row">
                             <div class="col-md-12">
-                                <button>Add to cart</button>
+                                <button class="add-to-cart-button button-primary js-add-to-cart">Add to cart</button>
                             </div>
                         </div>
                     </div>
@@ -85,8 +84,18 @@ topSelling.forEach((product) => {
 
             
 })
-console.log(topSellingHTML);
 
 document.querySelector('.top-selling').innerHTML = topSellingHTML; 
 
 
+document.querySelectorAll('.js-add-to-cart')
+    .forEach((button) => {
+            button.addEventListener("click", () =>{
+                console.log("added to cart");
+            });
+    }
+
+    );
+
+    //add to cart array
+    
