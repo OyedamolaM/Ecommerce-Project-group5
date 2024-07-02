@@ -1,8 +1,31 @@
 body{
     position: relative;
 }
-
-
+.footer-rows{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.fa-arrows-left-right{
+    padding-top: 20px;
+}
+.footer-logo{
+    font-weight: 800;
+    font-size: 30px;
+}
+.logo-detail{
+    padding-right:40px;
+    
+}
+.footer-title{
+    font-weight: 600;
+}
+.resources{
+    float: right;
+}
+.glyphicon-star{
+color: rgb(227, 227, 54);
+}
 header{
     color: white;
     background-color: black;
@@ -30,6 +53,10 @@ header{
     width: auto;
     margin: 5px;
 }
+.vefified{
+    width: 5px;
+    height: 5px;
+}
 .search{
     border-radius: 0.5rem;
     width: 200px;
@@ -47,7 +74,23 @@ header{
 .section-head{
     text-align: center;
 }
-
+.right-first-section{
+    position: relative;
+}
+.big-star{
+position:absolute;
+z-index: +1;
+top: 17%;
+right: 20%;
+}
+.small-star{
+    position:absolute;
+    bottom: 50%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    z-index: +1;
+}
 .product{
     display: flex;
     align-items: center;
@@ -56,12 +99,34 @@ header{
 .btn{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     height: 50px;
+}
+
+.header-size h1{
+    font-size: 60px;
+    font-weight: 800;
+}
+.heading{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.num{
+    font-size: 30px;
+    font-weight:800;
 }
 button{
     background-color: white;
     color: black;
+    border-radius: 1rem;
+    width: 100px;
+    height: 30px;
+    border:0.5px solid black
+}
+.shop-now-button{
+    background-color: black;
+    color: white;
 }
 .product div{
     width: 300px;
@@ -113,25 +178,57 @@ button{
     background-color: #F0EEED;
 }
 .section-6{
-    width: 100%;
-    height: 400px;
-    position: relative;
+    margin-top: 50px;
 }
-.section-6 div{
+.form-container{
 width: 80%;
-height: 100px;
+height: 115px;
 background-color: black;
 border-radius: 1rem;
 position: absolute;
-top: 25%;
-left: 10%;
+top: 0%;
+left: 6%;
 z-index: +1;
+}
+.foot{
+    position: relative;
+    height: 300px;
 }
 footer{
     background-color: #F0EEED;
     position: absolute;
     width: 100%;
-    height:250px;
-    bottom: 0%;
+    height:270px;
+    bottom: -8%;
     z-index: -1;
+}
+.form-color{
+    background-color: white;
+    width: 215px;
+    border-radius: 1rem;
+    padding-left: 5px;
+}
+.form-color input{
+    border: none;
+}
+.subscribe-text{
+    width: 215px;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: white;
+}
+.email-text{
+    border-width: none;
+    outline: none;
+}
+.news-letter-form{
+    float: right;
+}
+
+.header-size{
+    height: 60%;
+}
+.header-size-2{
+    height: 40%;
+    margin-top: 60px;
 }
