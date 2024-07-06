@@ -88,9 +88,21 @@ justify-content: space-around;
 background: #563434;
 }
  
+.blacknav{
+  background: #000000;
+width: 100%;
+height: 122px;
+top: 797px;
+gap: 0px;
+opacity: 0px;
+border-radius: 30px;
+
+}
 
 .header{
-  background: radial-gradient(#fff,#ffd6d6);
+  background-image: url(images/Group\ 16.png);
+
+
   
 }
 .header .row{
@@ -107,10 +119,20 @@ background: #563434;
 .col-3 img{
   width: 100%;
 }
-.small-container{
+/* .small-container{
   max-width: 1080px;
-  margin: auto;
+  margin: auto; 
   padding-left: 25px;
+  
+} */
+
+.small-container{
+ 
+ 
+}
+.small-container img{
+padding-top: 20px;
+margin-bottom: 0;
 }
 
 .col-4{
@@ -197,6 +219,20 @@ padding: 50px;
 }
 .brands{
   margin: 100px auto;
+}
+.shoppingBasket{
+  position: relative;
+}
+.shoppingBasket .quality{
+  background: radial-gradient(#fff,#ffd6d6);
+  color: black;
+  border-radius: 50%;
+  padding: 0 8px;
+  position: absolute;
+  top: -px;
+  left: 15px;
+  cursor: pointer;
+  
 }
 .col-5{
   width: 160PX;
@@ -301,5 +337,15 @@ ul{
     display: block;
     cursor: pointer;
   } 
+
+  
+.blacknav{
+  background: #000000;
+width: 500px;
+height: 122px;
+
+
+
+}
 }
 
