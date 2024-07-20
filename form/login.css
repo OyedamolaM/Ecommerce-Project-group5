@@ -9,9 +9,11 @@ body{
     justify-content: center;
     align-items: center;
     background: aliceblue;
+    background-image: url('../assets/Rectangle 2.png');
 }
 
 .container{
+   
 height: 70vh;
 width: 500px;
 background-color: #fff;
@@ -22,11 +24,6 @@ border-radius: 10px;
 box-shadow: 5px 20px 50px #000;
 }
 
-header{
-    background-color: red;
-    height: 4rem;
-    width: 100%;
-}
 
 .hero{
     padding: 1.6rem;
@@ -35,24 +32,45 @@ header{
 .hero h4{
     font-weight: 120px;
     padding-bottom: 1rem;
-    font-size: larger;
+    font-size: 40px;
  text-align: center; 
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
-#title h4{
+.herp p{
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding-top: 15px;
+font-size: 22px;
+}
 
+#title h4{
+    font: 2em sans-serif;
+    font-weight: bold;
 }
 
 button{
     height: 3rem;
     width: 5rem;
     margin-top: 1rem;
-    border-radius: 5px;
-    margin: 4rem;
-    background-color: red;
+    border-radius: 3px;
+    margin: 2rem;
+    background-color: #000;
+    color: #fff;
 }
+a{text-decoration: none;
+    text-align: center;
+    padding: 15px;
+        height: 3rem;
+        width: 5rem;
+        margin-top: 1rem;
+        border-radius: 3px;
+        margin: 2rem;
+        background-color: #000;
+        color: #fff;
+    
+    }  
+
 .btn{ display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +80,7 @@ button{
 .main{ margin-top: 50px;
     width: 350px;
     height: 500px;
-    background: red;
+    background: #000;
     overflow: hidden;
     display:none ;
     border-radius: 10px;
@@ -101,14 +119,14 @@ input{
     outline: none;
     border-radius: 5px;
 }
-.signup button {
+.signup a{ text-decoration: none;
     width: 60%;
     height: 40px;
     margin: 10px auto;
     display: flex;
     justify-content: center;
-    color: #fff;
-    background: rgb(155, 112, 112);
+    color: #000;
+    background:#fff;
     font-size:1rem ;
     font-weight: bold;
     padding: 10px;
@@ -116,9 +134,10 @@ input{
     border: none;
     transition: .2s ease-in;
     cursor: pointer;
+    text-transform: uppercase;
 
 }
-.login button {
+.login a {
     
         width: 60%;
         height: 40px;
@@ -126,7 +145,7 @@ input{
         display: flex;
         justify-content: center;
         color: #fff;
-        background: rgb(155, 112, 112);
+        background:#fff rgb(155, 112, 112);
         font-size:1rem ;
         font-weight: bold;
         padding: 10px;
@@ -134,12 +153,14 @@ input{
         border: none;
         transition: .2s ease-in;
         cursor: pointer;
+        text-transform: uppercase;
     
     
 }
 
-.signup button:hover{
+.signup a:hover{
     background: gray;
+    text-transform: capitalize;
 }
 
 /* WOORKING ON LOG IN*/
@@ -167,7 +188,7 @@ input{
 .vendor{ margin-top: 50px;
     width: 350px;
     height: 600px;
-    background: red;
+    background: #000;
     overflow: hidden;
     display:none ;
     border-radius: 10px;
@@ -206,14 +227,14 @@ input{
     outline: none;
     border-radius: 5px;
 }
-.v-signup button {
+.v-signup a {
     width: 60%;
     height: 40px;
     margin: 10px auto;
     display: flex;
     justify-content: center;
-    color: #fff;
-    background: rgb(155, 112, 112);
+    color: #000;
+    background:#fff ;
     font-size:1rem ;
     font-weight: bold;
     padding: 10px;
@@ -221,9 +242,10 @@ input{
     border: none;
     transition: .2s ease-in;
     cursor: pointer;
+    text-transform: uppercase;
 
 }
-.v-login button {
+.v-login a {
     
         width: 60%;
         height: 40px;
@@ -231,7 +253,7 @@ input{
         display: flex;
         justify-content: center;
         color: #fff;
-        background: rgb(155, 112, 112);
+        background:#000 rgb(155, 112, 112);
         font-size:1rem ;
         font-weight: bold;
         padding: 10px;
@@ -239,12 +261,14 @@ input{
         border: none;
         transition: .2s ease-in;
         cursor: pointer;
+        text-transform: uppercase;
     
     
 }
 
-.v-signup button:hover{
+.v-signup a:hover{
     background: gray;
+    text-transform: capitalize;
 }
 
 /* WOORKING ON VENDOR LOG IN*/

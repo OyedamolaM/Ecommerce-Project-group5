@@ -1,5 +1,5 @@
 let NewArrivalHTML = "";
-// rendering of New Arrivals section
+o// rendering of New Arrivals section
 newArrivals.forEach((product) => {
     NewArrivalHTML +=`
     <div class="col-md-3">
