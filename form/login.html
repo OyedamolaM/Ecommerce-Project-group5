@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign in page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ <div class="container">
+<header>
+  <div class="logo">
+    <img src="" alt="image on screen">
+  </div>
+  <h3>Shop.co</h3>
+</header>
+
+<section class="hero">
+<h4>Welcome To Shop.co</h4>
+<p>At Shop.co, we're Passionate about providing high quality wears that makes you look and feels great. our mission is to ofer th latest fashion trends at affordable prices, with a focus on exeptional customer service. </p>
+</section>
+
+<section id="title">
+<h4>Login as.</h4>
+<div class="btn">
+<button id="userbtn">User</button>
+<button id="vendorbtn">Vendor</button>
+</div>
+</section>
+</div> 
+
+<!---woking on sign in and up for the user-->
+<!---------sign up for users-->
+<div class="main" id="user-form">
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <div class="signup">
+<form>
+<label for="chk" aria-hidden="true">Sign up</label>
+<input type="text" name="txt" placeholder="User Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<button>Sign up</button>
+</form>
+  </div>
+<!--------USERS LOG IN-->
+<div class="login">
+<form>
+  <label for="chk" aria-hidden="true">Log in</label>
+<input type="email" name="email" placeholder="Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<button>Log in</button>
+</form>
+</div>
+  
+</div>
+
+<!-----WORKING ON VENDOR LOGIN------------>
+
+<div class="vendor" id="vendor-form">
+  <input type="checkbox" id="akh" aria-hidden="true">
+
+  <div class="v-signup">
+<form>
+<label for="akh" aria-hidden="true">Sign up</label>
+<input type="text" name="txt" placeholder="Businss Name" required>
+<input type="email" name="email" placeholder="Business Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<input type="number" name="number" placeholder="Mobile Number" required>
+<input type="text" name="address" placeholder="Business Address" required>
+<button > Vendor Sign up</button>
+</form>
+  </div>
+<!--------VENDOR LOG IN-->
+<div class="v-login">
+<form>
+  <label for="akh" aria-hidden="true">Log in</label>
+<input type="email" name="email" placeholder="Business Email" required>
+<input type="password" name="password" placeholder="Password" required>
+<button> Vendor Log in</button>
+</form>
+</div>
+  
+</div>
+
+<!----working on the form validaion and pop up logic---------------->
+
+<script>
+ let vendorBtn = document.getElementById("vendorbtn");
+ let userBtn = document.getElementById("userbtn");
+let userForm = document.getElementById("user-form");
+ const vendorForm = document.getElementById("vendor-form");
+ const intro = document.querySelector('.container');
+
+ 
+ function showUserForm() {
+  userForm.style.display = 'block';
+  vendorForm.style.display='none';
+  intro.style.display = 'none';
+ }
+
+ function showVendorForm() {
+   userForm.style.display = 'none';
+  vendorForm.style.display = 'block';
+  intro.style.display = 'none';}
+
+  vendorBtn.addEventListener('click' , showVendorForm);
+  userBtn.addEventListener('click' , showUserForm );
+
+ 
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

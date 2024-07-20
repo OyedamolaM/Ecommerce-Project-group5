@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background: aliceblue;
+}
+
+.container{
+height: 70vh;
+width: 500px;
+background-color: #fff;
+border: 7px solid #fff;
+margin-top: 5rem;
+display:;
+border-radius: 10px;
+box-shadow: 5px 20px 50px #000;
+}
+
+header{
+    background-color: red;
+    height: 4rem;
+    width: 100%;
+}
+
+.hero{
+    padding: 1.6rem;
+}
+
+.hero h4{
+    font-weight: 120px;
+    padding-bottom: 1rem;
+    font-size: larger;
+ text-align: center; 
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#title h4{
+
+}
+
+button{
+    height: 3rem;
+    width: 5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    margin: 4rem;
+    background-color: red;
+}
+.btn{ display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* WORKING ON THE USERS SIGN UP ANS LOG IN */
+.main{ margin-top: 50px;
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    display:none ;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;}
+
+ #chk{
+    display:none ;
+ }
+ 
+ .signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+ label{
+    color: #fff;
+    font-size: 2.3rem;
+    justify-content: center;
+    display: flex;margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+ }
+
+input{
+    width:60%;
+    height:20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.signup button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: rgb(155, 112, 112);
+    font-size:1rem ;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    border: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+
+}
+.login button {
+    
+        width: 60%;
+        height: 40px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        background: rgb(155, 112, 112);
+        font-size:1rem ;
+        font-weight: bold;
+        padding: 10px;
+        outline: none;
+        border: none;
+        transition: .2s ease-in;
+        cursor: pointer;
+    
+    
+}
+
+.signup button:hover{
+    background: gray;
+}
+
+/* WOORKING ON LOG IN*/
+.login{
+  height:460px ;
+  background: #eee; 
+  border-radius: 60% / 10%; 
+  transform: translateY(-180px);
+  transition: .8s ease-in-out;
+}
+
+.login label{
+    color: black;
+    transform: scale(1);
+}
+
+#chk:checked ~.login{
+    transform: translateY(-500px);
+}
+#chk:checked ~.login label{
+    transform: scaleY(1);
+}
+
+/*****VENDOR**************/
+.vendor{ margin-top: 50px;
+    width: 350px;
+    height: 600px;
+    background: red;
+    overflow: hidden;
+    display:none ;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;}
+
+ #akh{
+    display:none ;
+ }
+ 
+ .v-signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+ label{
+    color: #fff;
+    font-size: 2.3rem;
+    justify-content: center;
+    display: flex;margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+ }
+
+input{
+    width:60%;
+    height:20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.v-signup button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background: rgb(155, 112, 112);
+    font-size:1rem ;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    border: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+
+}
+.v-login button {
+    
+        width: 60%;
+        height: 40px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        background: rgb(155, 112, 112);
+        font-size:1rem ;
+        font-weight: bold;
+        padding: 10px;
+        outline: none;
+        border: none;
+        transition: .2s ease-in;
+        cursor: pointer;
+    
+    
+}
+
+.v-signup button:hover{
+    background: gray;
+}
+
+/* WOORKING ON VENDOR LOG IN*/
+.v-login{
+  height:600px ;
+  background: #eee; 
+  border-radius: 60% / 8%; 
+  transform: translateY(-180px);
+  transition: .8s ease-in-out;
+}
+
+.v-login label{
+    color: black;
+    transform: scale(1);
+}
+
+#akh:checked ~.v-login{
+    transform: translateY(-600px);
+}
+#akh:checked ~.v-login label{
+    transform: scaleY(1);
+}
