@@ -3,7 +3,6 @@ NewArrivalHtml = "";
 
   
   newArrivals.forEach((product) =>{
-    console.log("");
       NewArrivalHtml += `
         <div class="col">
         <div class="col-img">
@@ -12,7 +11,7 @@ NewArrivalHtml = "";
         <div class="col-icon">
           <a href="#"><i class="ri-heart-line"></i></a>
           <a href="#"><i class="ri-eye-line"></i></a>
-          <a href="#"><i class="ri-shopping-cart-fill"></i></a>
+          <a href="#"><i class="ri-shopping-cart-fill js-add-to-cart"  data-product-id="${product.id}"></i></a>
         </div>
   </div>`
   })
@@ -24,7 +23,6 @@ NewArrivalHtml = "";
   
   let topSellingHTML = "";
   topSelling.forEach((product) =>{
-    console.log("");
       topSellingHTML += `
         <div class="col">
         <div class="col-img">
@@ -33,12 +31,49 @@ NewArrivalHtml = "";
         <div class="col-icon">
           <a href="#"><i class="ri-heart-line"></i></a>
           <a href="#"><i class="ri-eye-line"></i></a>
-          <a href="#"><i class="ri-shopping-cart-fill"></i></a>
+          <a href="#"><i class="ri-shopping-cart-fill js-add-to-cart" data-product-id="${product.id}"></i></a>
         </div>
   </div>`
   })
 
   document.getElementById("top-selling-products").innerHTML = topSellingHTML
+
+  
+  document.querySelectorAll('.js-add-to-cart')
+
+    .forEach((button) => {
+            button.addEventListener("click", () =>{
+                const productId = button.dataset.productId;
+                let matchingItem;
+                cart.forEach((item) =>{
+                    if (productId === item.productId) {
+                      matchingItem = item
+                    }  
+                })
+                
+                if (matchingItem) {
+                  matchingItem.quantity ++
+                }
+                else {
+                  cart.push(
+                    {
+                      productId: productId,
+                      quantity: 1
+                    }
+                  )
+                }
+                let cartQuantity = 0;
+                cart.forEach((item) =>{
+                  cartQuantity += item.quantity
+                });
+                document.querySelector(".cart-quantity").innerHTML = cartQuantity
+                console.log (cartQuantity);
+                console.log(cart);
+            });
+    }
+
+    );
+    
 
   // let checkOutlist = [];
   // function onInIt() {
@@ -70,12 +105,12 @@ NewArrivalHtml = "";
   // onInIt()
   
   
-  function addTocart(Id) {
-    console.log(ArrProducts[Id]);
-    if (checkOutlist[Id] == null) {
-      checkOutlist[Id] = ArrProducts[Id];
-    }
-  }
+  // function addTocart(Id) {
+  //   console.log(ArrProducts[Id]);
+  //   if (checkOutlist[Id] == null) {
+  //     checkOutlist[Id] = ArrProducts[Id];
+  //   }
+  // }
 
 
 
@@ -146,14 +181,7 @@ NewArrivalHtml = "";
 
 // // document.querySelector('.new-arrivals-grid').innerHTML = NewArrivalProductsHtml; 
 
-// document.querySelectorAll('.js-add-to-cart')
-//     .forEach((button) => {
-//             button.addEventListener("click", () =>{
-//                 console.log(button.dataset);
-//             });
-//     }
 
-//     );
 
 
 

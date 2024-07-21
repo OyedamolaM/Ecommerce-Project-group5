@@ -8,7 +8,7 @@ const newArrivals =[
     },
     {
       id:2,
-      name:  "T-shirt with tape details",
+      name:  "Skinny-fit Jeans",
       image: "/img/n2.png",
       rating: "4.5/5",
       price: "100"
@@ -16,7 +16,7 @@ const newArrivals =[
   
     {
       id:3,
-      name:  "T-shirt with tape details",
+      name:  "Checkered Shirt",
       image: "/img/n3.png",
       rating: "4.5/5",
       price: "100"
@@ -24,7 +24,7 @@ const newArrivals =[
   
     {
       id:4,
-      name:  "T-shirt with tape details",
+      name:  "Sleeve Striped T-Shirt",
       image: "/img/n1.png",
       rating: "4.5/5",
       price: "100"
@@ -36,7 +36,7 @@ const newArrivals =[
 const topSelling = [
     {
     id:5,
-    name:  "T-shirt with tape details",
+    name:  "Courage Graphic T-Shirt",
     image: "/img/n5.png",
     rating: "4.5/5",
     price: "100"
@@ -44,7 +44,7 @@ const topSelling = [
 
   {
     id:6,
-    name:  "T-shirt with tape details",
+    name:  "Vertical-Striped Shirt ",
     image: "/img/n7.png",
     rating: "4.5/5",
     price: "100"
@@ -52,7 +52,7 @@ const topSelling = [
 
   {
     id:7,
-    name:  "T-shirt with tape details",
+    name:  "Loose-fit Bermuda Shorts",
     image: "/img/n6.png",
     rating: "4.5/5",
     price: "100"
@@ -60,7 +60,7 @@ const topSelling = [
 
   {
     id:8,
-    name:  "T-shirt with tape details",
+    name:  "Faded Skinny Jeans",
     image: "/img/n8.png",
     rating: "4.5/5",
     price: "100"
@@ -126,7 +126,7 @@ const topSelling = [
 // },
 // {
 //     image: '/assets/Courage Graphic T-shirt.png',
-//     name: 'Courage Graphic T-Shirt',
+//     name: 'Courage Graphic T-Shirt ',
 //     rating: {
 //         stars: 4,
 //         count: 61,
