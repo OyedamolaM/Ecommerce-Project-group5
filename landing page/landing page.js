@@ -1,5 +1,8 @@
 // let newArrivalsHTMl ="";
-NewArrivalHtml = "";
+import {cart, addToCart} from "../data/cart.js"
+import {newArrivals} from "../data/products.js"
+import {topSelling} from "../data/products.js"
+let NewArrivalHtml = "";
 
   
   newArrivals.forEach((product) =>{
@@ -13,6 +16,9 @@ NewArrivalHtml = "";
           <a href="#"><i class="ri-eye-line"></i></a>
           <a href="#"><i class="ri-shopping-cart-fill js-add-to-cart"  data-product-id="${product.id}"></i></a>
         </div>
+        <h5 class="p-name">itailina Shoe</h5>
+    <h4 class="p-price">$${(product.priceCents/100).toFixed(2)}</h4>
+    <button class="buy-btnn js-add-to-cart">Buy now</button>
   </div>`
   })
 
@@ -20,6 +26,7 @@ NewArrivalHtml = "";
 
   const body = document.querySelector("body");
   document.getElementById("new-arrival-products").innerHTML = NewArrivalHtml
+  
   
   let topSellingHTML = "";
   topSelling.forEach((product) =>{
@@ -37,42 +44,49 @@ NewArrivalHtml = "";
   })
 
   document.getElementById("top-selling-products").innerHTML = topSellingHTML
-
   
-  document.querySelectorAll('.js-add-to-cart')
+  
+  
 
-    .forEach((button) => {
-            button.addEventListener("click", () =>{
-                const productId = button.dataset.productId;
-                let matchingItem;
-                cart.forEach((item) =>{
-                    if (productId === item.productId) {
-                      matchingItem = item
-                    }  
-                })
-                
-                if (matchingItem) {
-                  matchingItem.quantity ++
-                }
-                else {
-                  cart.push(
-                    {
-                      productId: productId,
-                      quantity: 1
-                    }
-                  )
-                }
-                let cartQuantity = 0;
-                cart.forEach((item) =>{
-                  cartQuantity += item.quantity
+  //cart quantity function
+  function updateCartQuantity(cartItem) {
+    let cartQuantity = 0;
+                cart.forEach((cartItem) =>{
+                  cartQuantity += cartItem.quantity
                 });
                 document.querySelector(".cart-quantity").innerHTML = cartQuantity
                 console.log (cartQuantity);
                 console.log(cart);
-            });
-    }
+    
+  }
+  
+let addToCartClass = document.querySelectorAll(".js-add-to-cart")  
+  addToCartClass.forEach((button)=>{
+    button.addEventListener('click', ()=>{
+      const productId = button.dataset.productId;
+        addToCart(productId);   
+        updateCartQuantity();       
+    });
+  });
+  
 
-    );
+  // // function updateCartQuantity() {
+    
+  // }
+  
+  // document.querySelectorAll('.js-add-to-cart')
+
+  //   .forEach((button) => {
+  //           button.addEventListener("click", () =>{
+  //               const productId = button.dataset.productId;
+  //               addToCart(productId);
+  //               // updateCartQuantity();
+  //           });
+  //   }
+
+    // );
+
+
     
 
   // let checkOutlist = [];

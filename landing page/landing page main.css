@@ -285,8 +285,8 @@ section{
 }
 .col-icon{
   position: absolute;
-  bottom: 0px;
-  right: 30px;
+  top: 20px;
+  right: 00px;
 }
 .col-icon a{
   display: block;

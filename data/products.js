@@ -1,17 +1,17 @@
-const newArrivals =[
+export const newArrivals =[
     {
-      id:1,
+      id: "jersey1",
       name:  "T-shirt with tape details",
       image: "/img/n4.png",
       rating: "4.5/5",
-      price: "100"
+      priceCents: "1200"
     },
     {
-      id:2,
+      id: "jersey2",
       name:  "Skinny-fit Jeans",
       image: "/img/n2.png",
       rating: "4.5/5",
-      price: "100"
+      priceCents: "1000"
     },
   
     {
@@ -19,7 +19,7 @@ const newArrivals =[
       name:  "Checkered Shirt",
       image: "/img/n3.png",
       rating: "4.5/5",
-      price: "100"
+      priceCents: "1500"
     },
   
     {
@@ -27,19 +27,19 @@ const newArrivals =[
       name:  "Sleeve Striped T-Shirt",
       image: "/img/n1.png",
       rating: "4.5/5",
-      price: "100"
+      priceCents: "2000"
     },
   ]
 
 
 //top selling products list
-const topSelling = [
+export const topSelling = [
     {
     id:5,
     name:  "Courage Graphic T-Shirt",
     image: "/img/n5.png",
     rating: "4.5/5",
-    price: "100"
+    priceCents: "3000"
   },
 
   {
@@ -47,7 +47,7 @@ const topSelling = [
     name:  "Vertical-Striped Shirt ",
     image: "/img/n7.png",
     rating: "4.5/5",
-    price: "100"
+    priceCents: "2500"
   },
 
   {
@@ -55,7 +55,7 @@ const topSelling = [
     name:  "Loose-fit Bermuda Shorts",
     image: "/img/n6.png",
     rating: "4.5/5",
-    price: "100"
+    priceCents: "1820"
   },
 
   {
@@ -63,7 +63,7 @@ const topSelling = [
     name:  "Faded Skinny Jeans",
     image: "/img/n8.png",
     rating: "4.5/5",
-    price: "100"
+    priceCents: "1600"
   },
 ]
 
