@@ -1,7 +1,7 @@
 import {cart} from '../data/cart.js'; 
 import { newArrivals, topSelling} from '../data/products.js';
 import {removeCart} from '../data/cart.js';
-
+console.log(cart);
 let cartTable = "";
 //cartProduct would be the name of the object of the cart
 cart.forEach((cartProduct) =>{
