@@ -18,7 +18,7 @@ cart.forEach((cartProduct) =>{
 })
  
 
- cartTable +=  `<tr class="cart-item-container">
+ cartTable +=  `<tr class="cart-item-container deleted-product-class${matchingProduct.id}">
    <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
    </td>
 
@@ -46,11 +46,13 @@ deleteCart.forEach((deletebutton) =>{
     deletebutton.addEventListener("click", () =>{
        const productIdToBeDeleted = deletebutton.dataset.productId;
        removeCart(productIdToBeDeleted);
-       console.log(cart);
+
+      const container = document.querySelector(`.deleted-product-class${productIdToBeDeleted}`)
+         console.log(container);
+         container.remove()
+
     //   document.remove()
-       
-        //   const container =  document.querySelector(`.cart-item-container-${productId}`)
-        //   container.remove()
+            //   container.remove()
 }
 )
 
