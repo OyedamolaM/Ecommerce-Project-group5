@@ -1,5 +1,12 @@
 export let cart =[
-
+    {
+productId: "jersey1",
+quantity: 2
+},
+{
+    productId: "jersey2",
+    quantity: 1
+    }
 ]
 
 export function addToCart(productId) {
@@ -22,6 +29,18 @@ export function addToCart(productId) {
           }
   }
 
+  export function removeCart(productIdToBeDeleted) {
+    const newCart = [];
+
+    cart.forEach((cartItem) =>{
+if (cartItem.productId !== productIdToBeDeleted){
+    newCart.push(cartItem);
+}
+
+    }
+);
+    cart = newCart;
+  }
 // export let cart = (localStorage.getItem('cart'));
 
 // if(!cart){

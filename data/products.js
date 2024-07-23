@@ -15,7 +15,7 @@ export const newArrivals =[
     },
   
     {
-      id:3,
+      id: "jersey3",
       name:  "Checkered Shirt",
       image: "/img/n3.png",
       rating: "4.5/5",
@@ -23,7 +23,7 @@ export const newArrivals =[
     },
   
     {
-      id:4,
+      id: "jersey4",
       name:  "Sleeve Striped T-Shirt",
       image: "/img/n1.png",
       rating: "4.5/5",
@@ -35,7 +35,7 @@ export const newArrivals =[
 //top selling products list
 export const topSelling = [
     {
-    id:5,
+    id: "jersey5",
     name:  "Courage Graphic T-Shirt",
     image: "/img/n5.png",
     rating: "4.5/5",
@@ -43,7 +43,7 @@ export const topSelling = [
   },
 
   {
-    id:6,
+    id:"jersey6",
     name:  "Vertical-Striped Shirt ",
     image: "/img/n7.png",
     rating: "4.5/5",
@@ -51,7 +51,7 @@ export const topSelling = [
   },
 
   {
-    id:7,
+    id:"jersey7",
     name:  "Loose-fit Bermuda Shorts",
     image: "/img/n6.png",
     rating: "4.5/5",
@@ -59,7 +59,7 @@ export const topSelling = [
   },
 
   {
-    id:8,
+    id: "jersey8",
     name:  "Faded Skinny Jeans",
     image: "/img/n8.png",
     rating: "4.5/5",

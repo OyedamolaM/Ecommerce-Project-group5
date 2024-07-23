@@ -1,68 +1,59 @@
-// import {cart,} from '../data/cart.js'; 
-// import {newArrivals, topSelling } from '../data/products.js';
+import {cart} from '../data/cart.js'; 
+import { newArrivals, topSelling} from '../data/products.js';
+import {removeCart} from '../data/cart.js';
 
-// let tableBody = "";
-
-
-// cart.forEach((cartItem) =>{
-//     const productId = cartItem.productId;
-// //looping through cart to get product Id and assigning it productId variable
-
-//     let matchingProduct;
-// //looping through product cart and checking for a match between the productId generated and the product Id in the newarrival product list
-//     newArrivals.forEach((product)=> {
-//         if (product.id === productId){
-//             //if there is a match in product ID assign that product object to a variable that can be reused 
-//             matchingProduct = product
-            
-            
-//         }
-        
-//     });
+let cartTable = "";
+//cartProduct would be the name of the object of the cart
+cart.forEach((cartProduct) =>{
+    //productId is asigned variable to access each of the items id within the cart
+    const productId = cartProduct.productId
     
-// tableBody +=  `<tr class="cart-item-container">
-//   <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
-//   </td>
+     let matchingProduct;
+    newArrivals.forEach((products)=>{
+        
+        if (products.id === productId){
+            matchingProduct = products
+        }
+        
+})
+ 
 
-//     <td><img src="${matchingProduct.image}"></td>
-//     <td>
-//       <h5>${matchingProduct.name}</h5>
-//     </td>
-//     <td>$${(matchingProduct.priceCents/10).toFixed(2)}</td>
-//     <td><input class="w-25 pl-1" value="${cartItem.quantity}" type="number" ></td>
-//     <td>$100.00</td>
-// </tr>`;
+ cartTable +=  `<tr class="cart-item-container">
+   <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
+   </td>
 
-// });
-// document.querySelector(".table-body").innerHTML = tableBody
-// // console.log(matchingProduct);
+     <td><img src="${matchingProduct.image}"></td>
+     <td>
+       <h5>${matchingProduct.name}</h5>
+     </td>
+     <td>$${(matchingProduct.priceCents/10).toFixed(2)}</td>
+     <td><input class="w-25 pl-1" value="${cartProduct.quantity}" type="number" ></td>
+     <td>$100.00</td>
+ </tr>`;
+})
 
-// // const deleteCart = document.querySelectorAll(".delete-cart")
-// // deleteCart.forEach((link) =>{
-// //     deleteSpan.addEventListener("click", () =>{
-// //        const productId = link.dataset.productId;
-// //        console.log(productId);
-// //        removeCart(productId);
-// //       document.remove()
+
+            
+         
+    
+
+document.querySelector(".table-body").innerHTML = cartTable
+
+
+
+const deleteCart = document.querySelectorAll(".delete-cart")
+deleteCart.forEach((deletebutton) =>{
+    deletebutton.addEventListener("click", () =>{
+       const productIdToBeDeleted = deletebutton.dataset.productId;
+       removeCart(productIdToBeDeleted);
+       console.log(cart);
+    //   document.remove()
        
-// //           const container =  document.querySelector(`.cart-item-container-${productId}`)
-// //           container.remove()
-// // }
-// // )
+        //   const container =  document.querySelector(`.cart-item-container-${productId}`)
+        //   container.remove()
+}
+)
 
-// // })
+})
 
-
-// // function removeCart(productId) {
-// //     const newCart = [];
-
-// //     cart.forEach((cartItem) =>{
-// // if (cartItem.id === productId){
-// //     console.log(cartItem.id);
-// //     newCart.push(cartItem);
-// // }
-
-// //     }
-// // );
-// //     cart = newCart;
-// //   }
+   
