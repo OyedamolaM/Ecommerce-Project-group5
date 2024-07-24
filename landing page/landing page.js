@@ -12,13 +12,13 @@ let NewArrivalHtml = "";
           <img src="${product.image}" alt="tape details">
         </div>
         <div class="col-icon">
-          <a href="#"><i class="ri-heart-line"></i></a>
-          <a href="#"><i class="ri-eye-line"></i></a>
-          <a href="#"><i class="ri-shopping-cart-fill js-add-to-cart"  data-product-id="${product.id}"></i></a>
+          <a ><i class="ri-heart-line"></i></a>
+          <a ><i class="ri-eye-line"></i></a>
+          <a ><i class="ri-shopping-cart-fill js-add-to-cart"  data-product-id="${product.id}"></i></a>
         </div>
-        <h5 class="p-name">itailina Shoe</h5>
+        <h5 class="p-name">${product.name}</h5>
     <h4 class="p-price">$${(product.priceCents/100).toFixed(2)}</h4>
-    <button class="buy-btnn js-add-to-cart">Buy now</button>
+    <button class="buy-btnn js-add-to-cart" data-product-id="${product.id}">>Buy now</button>
   </div>`
   })
 
@@ -36,10 +36,14 @@ let NewArrivalHtml = "";
           <img src="${product.image}" alt="tape details">
         </div>
         <div class="col-icon">
-          <a href="#"><i class="ri-heart-line"></i></a>
-          <a href="#"><i class="ri-eye-line"></i></a>
-          <a href="#"><i class="ri-shopping-cart-fill js-add-to-cart" data-product-id="${product.id}"></i></a>
+          <a ><i class="ri-heart-line"></i></a>
+          <a ><i class="ri-eye-line"></i></a>
+          <a ><i class="ri-shopping-cart-fill js-add-to-cart" data-product-id="${product.id}"></i></a>
         </div>
+        <h5 class="p-name">${product.name}</h5>
+        <h4 class="p-price">$${(product.priceCents/100).toFixed(2)}</h4>
+        <button class="buy-btnn js-add-to-cart" data-product-id="${product.id}">>Buy now</button>
+
   </div>`
   })
 
@@ -63,7 +67,16 @@ let addToCartClass = document.querySelectorAll(".js-add-to-cart")
   addToCartClass.forEach((button)=>{
     button.addEventListener('click', ()=>{
       const productId = button.dataset.productId;
-        addToCart(productId);   
+        addToCart(productId);
+        // let matchingProduct;
+          // newArrivals.forEach((products) => {
+          //   if (products.id = matchingItemId){
+          //       matchingProduct = products
+          //   }
+          //   console.log(matchingProduct);
+          // }
+          // )
+            
         updateCartQuantity();       
     });
   });

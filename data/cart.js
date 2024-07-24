@@ -1,12 +1,10 @@
 export let cart = JSON.parse(localStorage.getItem('cart'));
+
+// import { newArrivals } from "./products";
+
  if(!cart){
-    cart = [{
-        productId: "jersey1",
-        quantity: 2
-    }, {
-        productId: "jersey2",
-        quantity: 1
-        }];
+let cart = [
+        ];
  }
     
     
@@ -20,10 +18,42 @@ function CartLocalStorage(){
 
 export function addToCart(productId) {
     let matchingItem;
+    let matchingItemId;
       cart.forEach((cartItem)=>{
           if (productId === cartItem.productId){
             matchingItem = cartItem;
+            // console.log(matchingItem.productId);
+            // console.log(cartItem);
+            matchingItemId = matchingItem.productId
           } 
+          console.log(matchingItemId);
+          
+          
+          // let matchingProduct;
+          // newArrivals.forEach((products) => {
+          //   if (products.id = matchingItemId){
+          //       matchingProduct = products
+          //   }
+          //   console.log(matchingProduct);
+          // }
+          // )
+          
+          
+          
+          // console.log(matchingItemId);
+          // cart.forEach((cartProduct) =>{
+          //   //productId is asigned variable to access each of the items id within the cart
+          //   const productId = cartProduct.productId
+            
+          //    let matchingProduct;
+          //   // topSelling,
+          //   newArrivals.forEach((products)=>{
+          //       if (products.id === productId){
+          //           matchingProduct = products
+          //       }
+          //       console.log(matchingProduct);
+                
+          // })
       });
       if(matchingItem){
             matchingItem.quantity +=1
@@ -56,29 +86,6 @@ if (cartItem.productId !== productIdToBeDeleted){
 
   
 
-// export let cart = (localStorage.getItem('cart'));
-
-// if(!cart){
-//     cart =[
-//         {
-//         productId: "jersey1",
-//         quantity: 2  
-//     },
-//     {
-//         productId: "jersey2",
-//         quantity: 2  
-//     }
-//     ];
-// }
-// export function cartLocalStorage(){
-//     localStorage.setItem('cart', JSON.stringify(cart));
-// }
-
-
-// 
-//     cartLocalStorage();
-//   }
-
 //   export function removeCart(productId) {
 
 
@@ -91,7 +98,4 @@ if (cartItem.productId !== productIdToBeDeleted){
 // }
 //     }
 // );
-// cartLocalStorage();
-//   }
-
-   
+// 

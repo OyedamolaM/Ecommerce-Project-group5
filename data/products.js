@@ -29,6 +29,7 @@ export const newArrivals =[
       rating: "4.5/5",
       priceCents: "2000"
     },
+    
   ]
 
 
