@@ -10,14 +10,12 @@ cart.forEach((cartProduct) =>{
   const productId = cartProduct.productId
   
    let matchingProduct;
-  // topSelling,
+   //function running cart of each section (top selling and new arrivals)
   function addToCartLoop(sectionProduct){
     sectionProduct.forEach((products)=>{
       if (products.id === productId){
           matchingProduct = products
-          subTotal = parseInt(matchingProduct.priceCents/10) + subTotal
-
-
+          
           cartTable +=  `<tr class="cart-item-container deleted-product-class${matchingProduct.id}">
           <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
           </td>
@@ -30,6 +28,7 @@ cart.forEach((cartProduct) =>{
             <td><input class="w-25 pl-1" value="${cartProduct.quantity}" type="number" ></td>
             <td>${(matchingProduct.priceCents/10) * cartProduct.quantity }</td>
          </tr>`;
+         subTotal = parseInt((matchingProduct.priceCents/10) * cartProduct.quantity ) + subTotal
       } 
 })
   }
