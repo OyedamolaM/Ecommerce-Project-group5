@@ -62,7 +62,7 @@ header{
 .shoppingBasket{
   position: relative;
 }
-.shoppingBasket .quantity{
+.shoppingBasket .cart-quantity{
   background-color: #ffc633;
   color: #f0f0f0;
   border-radius: 50%;
@@ -101,7 +101,7 @@ section{
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url(img/bg.png);
+  background-image: url(/img/bg.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -285,8 +285,8 @@ section{
 }
 .col-icon{
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  top: 20px;
+  right: 00px;
 }
 .col-icon a{
   display: block;
