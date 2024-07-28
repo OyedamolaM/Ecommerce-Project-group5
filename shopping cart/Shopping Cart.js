@@ -1,7 +1,6 @@
 import {cart} from '../data/cart.js'; 
 import { newArrivals, topSelling} from '../data/products.js';
 import {removeCart} from '../data/cart.js';
-console.log(cart);
 
 let cartTable = "";
 //cartProduct would be the name of the object of the cart
@@ -11,43 +10,40 @@ cart.forEach((cartProduct) =>{
   const productId = cartProduct.productId
   
    let matchingProduct;
-  // topSelling,
- newArrivals.forEach((products)=>{
+   //function running cart of each section (top selling and new arrivals)
+  function addToCartLoop(sectionProduct){
+    sectionProduct.forEach((products)=>{
       if (products.id === productId){
           matchingProduct = products
-          subTotal = parseInt(matchingProduct.priceCents/10) + subTotal
-      }
-           
-      // let matchingProdut;
-          // newArrivals.forEach((products) => {
-          //   if (products.id = matchingItemId){
-          //       matchingProdut = products
-          //   }
-          //   console.log(matchingProdut);
-          // }
-          // )
           
+          cartTable +=  `<tr class="cart-item-container deleted-product-class${matchingProduct.id}">
+          <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
+          </td>
+         
+            <td><img src="${matchingProduct.image}"></td>
+            <td>
+              <h5>${matchingProduct.name}</h5>
+            </td>
+            <td>$${(matchingProduct.priceCents/10).toFixed(2)}</td>
+            <td><input class="w-25 pl-1" value="${cartProduct.quantity}" type="number" ></td>
+            <td>${(matchingProduct.priceCents/10) * cartProduct.quantity }</td>
+         </tr>`;
+         subTotal = parseInt((matchingProduct.priceCents/10) * cartProduct.quantity ) + subTotal
+      } 
 })
+  }
+  addToCartLoop(newArrivals)
+ addToCartLoop(topSelling)
 
-cartTable +=  `<tr class="cart-item-container deleted-product-class${matchingProduct.id}">
- <td><span class="delete-cart" data-product-id="${matchingProduct.id}"><i class="fas fa-trash-alt" ></i></span>
- </td>
-
-   <td><img src="${matchingProduct.image}"></td>
-   <td>
-     <h5>${matchingProduct.name}</h5>
-   </td>
-   <td>$${(matchingProduct.priceCents/10).toFixed(2)}</td>
-   <td><input class="w-25 pl-1" value="${cartProduct.quantity}" type="number" ></td>
-   <td>${(matchingProduct.priceCents/10) * cartProduct.quantity }</td>
-</tr>`;
 
 
 })  
 
 document.querySelector(".table-body").innerHTML = cartTable
 
-let shippingTotal = document.querySelector('.shipping').innerHTML
+//function for the table calculation
+function totalTableCalculation(){
+  let shippingTotal = document.querySelector('.shipping').innerHTML
 document.querySelector('.subtotal').innerHTML = subTotal
 
 let total = parseInt(shippingTotal) + parseInt(subTotal)
@@ -55,6 +51,9 @@ let total = parseInt(shippingTotal) + parseInt(subTotal)
 document.querySelector(".total-amount").innerHTML = `$${total}`
 document.querySelector('.shipping').innerHTML = `$${shippingTotal}`
 document.querySelector('.subTotal').innerHTML = `$${subTotal}`
+}
+totalTableCalculation();
+
 
 const deleteCart = document.querySelectorAll(".delete-cart")
 deleteCart.forEach((deletebutton) =>{
@@ -65,12 +64,8 @@ deleteCart.forEach((deletebutton) =>{
       const container = document.querySelector(`.deleted-product-class${productIdToBeDeleted}`)
          console.log(container);
          container.remove()
-
-    //   document.remove()
-            //   container.remove()
 }
 )
-
 })
 
 

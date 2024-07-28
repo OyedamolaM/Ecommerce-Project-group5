@@ -8,23 +8,22 @@
 </head>
 <body>
 
- 
-<section class="hero container">
+<nav>
+    <div class="logo" onclick="window.location.reload()"><h6>shop.co</h6></div>
+<ul>
+  <li><button id="userbtn"  onclick="showUserForm()">User</button></li>
+<li><button id="vendorbtn"  onclick="showVendorForm()" >Vendor</button></li>
+ <li><button id="browser" onclick="window.location.href='landing page/landingpagemain.html' ">Explore</button></li> 
+</ul>    
+</nav>
 
-  <div id="bck-img">
-    <img src="/assets/Rectangle 2.png" alt="image on screen">
-  </div>
+ 
+<section class="hero ">
   <h1>Welcome To Shop.co</h1>
   <div class="text">
-<p>At Shop.co, we're Passionate about providing high quality wears that makes you look and feels great. our mission is to ofer th latest fashion trends at affordable prices, with a focus on exeptional customer service. </p>
-</div>
-
-<h4>Login as:</h4>
-<div class="btn">
-<button id="userbtn">User</button>
-<a id="browser">Browser</a>
-<button id="vendorbtn">Vendor</button>
-</div>
+<p id="auto-write"></p>
+</div>  
+<div class="btn"> <button id="userbtn user"onclick="window.location.href='landing page/landingpagemain.html'"  >Explore</button> </div>
 </section>
 
 
@@ -39,18 +38,18 @@
 <input type="text" name="txt" placeholder="User Name" required>
 <input type="email" name="email" placeholder="Email" required>
 <input type="password" name="password" placeholder="Password" required>
-<h4 id="form-error" style=" color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
-<a>Sign up</a>
+<h4 id="Usignup-error"    class="form-error" style=" color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
+<a onclick="userSn()">Sign up</a>
 </form>
   </div>
 <!--------USERS LOG IN-->
 <div class="login">
 <form id="user-login-f">
   <label for="chk" aria-hidden="true">Log in</label>
-<input type="email" name="email" placeholder="Email" required>
-<input type="password" name="password" placeholder="Password" required>
-<h4 id="form-error" style="  color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
-<a>User Log in</a>
+<input type="email" name="email" placeholder="Email" required  style="background-color: #000;" >
+<input type="password" name="password" placeholder="Password" required  style="background-color: #000;  " >
+<h4 id="Ulogin-error"  class="form-error" style="  color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
+<a onclick=" userLn()"  style="background-color: #000;  color: #fff;">User Log in</a>
 </form>
 </div>
   
@@ -69,18 +68,18 @@
 <input type="password" name="password" placeholder="Password" required>
 <input type="number" name="number" placeholder="Mobile Number" required>
 <input type="text" name="address" placeholder="Business Address" required>
-<h4  id="form-error"  style=" color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
-<a>Vendor Sign up</a>
+<h4 id="Vsignup-error"     class="form-error"  style=" color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
+    <a onclick="vendorSn()" >Vendor Sign up</a>
 </form>
   </div>
 <!--------VENDOR LOG IN-->
 <div class="v-login">
 <form id="vendor-login-f">
   <label for="akh" aria-hidden="true">Log in</label>
-<input type="email" name="email" placeholder="Business Email" required>
-<input type="password" name="password" placeholder="Password" required>
-<h4  id="form-error"  style=" color: red; font-size: medium; display: none;">kindly fill the form accurately</h4>
-<a>Vendor Log in</a>
+<input type="email" name="email" placeholder="Business Email" required  style="background-color: #000;">
+<input type="password" name="password" placeholder="Password" required style="background-color: #000;" >
+<h4 id="Vlogin-error"    class="form-error"  style=" color: red; font-size: medium; display: none;">kindly fill the form accurately</h4>
+<a onclick="vendorln()"  style="background-color: #000;  color: #fff;" >Vendor Log in</a>
 </form>
 </div>
   
