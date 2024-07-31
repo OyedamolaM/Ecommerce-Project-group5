@@ -2,9 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="landing page main.css">
-  <link rel="stylesheet" href="/product page/productpage.css">
   <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
@@ -15,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>website</title>
 </head>
 <body>
            <!-- header -->
@@ -34,16 +33,16 @@
         <a href=""><i class="ri-search-line"></i></a>
         <div class="shoppingBasket">
           <a href="/shopping cart/Shopping Cart.html"><i class="ri-shopping-cart-2-line"></i></a>
-          <span class="cart-quantity">0</span>
+          <span class="cart-quantity js-cart-quanitity">0</span>
         </div> 
         <a href=""><i class="ri-user-line"></i></a>
-        <a href=""><i class="ri-menu-line"></i></a>
-        <!-- <div class="bx bx-menu" id="menu-icon"></div>
-      </div> -->
+      
+         <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
 </header> 
             <!-- home------ -->
   <section class="home">
-        <div class="home-text">
+        <div class="home-text" data-aos="fade-right">
               <h6>New Arrivals</h6>
               <h1>New Arrivals <br> ready to rock</h1>
               <p>Browse through our diverse range of meticulously crafted garments,
@@ -54,27 +53,27 @@
               </a>
                 </div>
   </section>
-          brands------
+          <!-- brands------ -->
 <div class="brands">
-      <div class="main-brands">
+      <div class="main-brands" data-aos="zoom-in">
           <div class="brands-c">
-            <img src="/img/g1.png">
+            <a href="https://www.versace.com/ng/en/"><img src="/img/g1.png"></a>
           </div>
 
           <div class="brands-c">
-            <img src="/img/g2.png">
+           <a href="https://www.zara.com/"><img src="/img/g2.png"></a> 
           </div>
 
           <div class="brands-c">
-            <img src="/img/g3.png">
+            <a href="https://www.gucci.com/us/en/"><img src="/img/g3.png"></a>
           </div>
 
           <div class="brands-c">
-            <img src="/img/g4.png">
+           <a href="https://www.prada.com/ww/en.html"><img src="/img/g4.png"></a> 
           </div>
 
           <div class="brands-c">
-            <img src="/img/g5.png">
+            <a href="https://www.calvinklein.us/en"><img src="/img/g5.png"></a>
           </div>
       </div>
 </div>
@@ -83,9 +82,11 @@
       <div class="center-text">
         <h2>NEW ARRIVALS</h2>
       </div>
-
+      <div class="n-content js-products-grid">
+      </div>
+<!-- 
       <div class="selling-content" id="new-arrival-products">
-        </div>
+        </div> -->
         
   </section>
 <!-- <div><button></button></div> -->
@@ -145,7 +146,7 @@
     <input type="text" placeholder="Your email......;" required>
     <input type="submit" value="subscribe" class="btnn">
   </form>
-</div>
+</div>/
     </section>
 
     <!-- footer -->
@@ -197,8 +198,16 @@
       </div>
 
   
-  <script type="module" src="landing page.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-
-</body>
+  <!-- <script src="new landing.js"></script> -->
+   <script src="shop cart.js"></script>
+   <script src="products.js"></script>
+  <script type="module" src="new cart.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1450,
+    });
+  </script>
+  </body>
 </html>
