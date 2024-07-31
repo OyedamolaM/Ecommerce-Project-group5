@@ -62,7 +62,7 @@ const vloginError = document.getElementById("Vlogin-error");
 
 function userLn(){
   if(userLogin.checkValidity()){
-    window.location.href='landing page/landingpagemain.html';
+    window.location.href='/form/landing page/landingpagemain.html';
   } else{
     uloginError.style.display='block';
   }
