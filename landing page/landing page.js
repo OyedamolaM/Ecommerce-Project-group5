@@ -50,7 +50,37 @@ let NewArrivalHtml = "";
 
   document.getElementById("top-selling-products").innerHTML = topSellingHTML
   
+  // VENDOR PAGE
+
+  let vendorPageHtml = "";
+
   
+  vendors.forEach((product) =>{
+      vendorPageHtml += `
+        <div class="col">
+        <div class="col-img">
+          <img src="${product.image}" alt="tape details">
+        </div>
+        <div class="col-icon">
+          <a ><i class="ri-heart-line"></i></a>
+          <a ><i class="ri-eye-line"></i></a>
+          <a ><i class="ri-shopping-cart-fill js-add-to-cart"  data-product-id="${product.id}"></i></a>
+        </div>
+        <h5 class="p-name">${product.name}</h5>
+    <h4 class="p-price">$${(product.priceCents/100).toFixed(2)}</h4>
+    <button class="buy-btnn js-add-to-cart" data-product-id="${product.id}">>Buy now</button>
+  </div>`
+  })
+
+
+
+  
+  document.getElementById("new-arrival-products").innerHTML = NewArrivalHtml
+
+
+
+
+
   
 
   //cart quantity function
