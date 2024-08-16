@@ -36,9 +36,10 @@ const vloginError = document.getElementById("Vlogin-error");
   vendorBtn.addEventListener('click' , showVendorForm);
   userBtn.addEventListener('click' , showUserForm );
 
+
   function vendorln(){
     if (vendorLogin.checkValidity()) {
-      window.location.href='landing page/landingpagemain.html';
+      window.location.href='../landing page/landingpagemain.html';
     } else{
       vloginError.style.display='block';
     }
@@ -46,7 +47,7 @@ const vloginError = document.getElementById("Vlogin-error");
 
   function vendorSn(){
     if(vendorSignup.checkValidity()) {
-      window.location.href='landing page/landingpagemain.html';
+      window.location.href='../landing page/landingpagemain.html';
     } else{
       vsignupError.style.display='block';
     }
@@ -54,7 +55,7 @@ const vloginError = document.getElementById("Vlogin-error");
 
   function  userSn(){
     if(userSignUpForm.checkValidity()){
-      window.location.href='landing page/landingpagemain.html';
+      window.location.href='../landing page/landingpagemain.html';
     } else{
       usignupError.style.display='block';
     }
@@ -62,7 +63,7 @@ const vloginError = document.getElementById("Vlogin-error");
 
 function userLn(){
   if(userLogin.checkValidity()){
-    window.location.href='/form/landing page/landingpagemain.html';
+    window.location.href='../landing page/landingpagemain.html';
   } else{
     uloginError.style.display='block';
   }
