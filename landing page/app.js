@@ -1,13 +1,14 @@
-import { cart } from "./shop cart.js";
+// select element 
+const productsEl = document.querySelector(".n-content"); 
+// let shoppingBasket = document.querySelector(".shoppingBasket");
 
- 
+// RENDER PRODUCTS?
+ function renderProducts(){
+  products. forEach((product) => {
+    
+    
 
-let productsHtml = '';
-
-
-
-products.forEach((product) =>{
-productsHtml += `
+    productsEl.innerHTML += `
     <div class="row">
             <div class="row-img">
               <img src="${product.image}">  
@@ -22,10 +23,11 @@ productsHtml += `
               <a href="#">${product.rating.stars}</a>
             </div>
             <div class="row-in">
-
+            
               <button class="row-left js-add-to-cart" 
               data-product-id="${product.id}">
                 Add to Cart
+
                   <i class="ri-shopping-cart-2-fill"></i>
               </button>
               <div class="row-right">
@@ -34,41 +36,32 @@ productsHtml += `
             </div>
           </div>
 `;
-});
-// console.log(productsHtml);
-document.querySelector('.js-products-grid').
-innerHTML = productsHtml;
 
-document.querySelectorAll('.js-add-to-cart')
-.forEach((button) => {
-    button.addEventListener('click', () =>{
-   const productId = button.dataset.productId; 
+  });
+ };
+ renderProducts();
 
-   let matchingItem;
-          // to check if the product is already in the cart//
-   cart.forEach((item) => {
-    if (productId === item.productId) {
-      matchingItem = item
-    }
-   });
 
-   if (matchingItem) {
-    matchingItem.quantity += 1;
-   } else {
-    cart.push({
-      productId: productId,
-      quantity: 1
-     });
-   }
 
-   let cartQuantity = 0;
+// shoppingBasket.onclick = () =>{
+//   body.classList.add("active")
 
-   cart.forEach((item) => {
-cartQuantity += item.quantity;
-   });
+    // cart array
+// let cart = [];
 
-document.querySelector('.js-cart-quanitity') 
- .innerHTML = cartQuantity
+        // add to cart 
+ function addToCart(id) {
+  
+  // check if product already exist in cartb
+    // if (cart.some((item) => item.id === id)){
+    //   alert("product already in cart")
+    // }else {
+    //   const item = products.find((product) => product.id === id);
+    //   cart.push(item);
+    // }
 
-    });
-});
+  console.log(id);
+  
+   
+   
+ }
