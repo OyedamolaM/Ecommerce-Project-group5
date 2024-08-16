@@ -122,11 +122,17 @@ button{
     box-shadow:  0 10px 20px rgba(0,0,0,0.4);
 
 }
+
+
+
+
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    position: relative;
+    z-index: 9;
 }
 
 #user{
@@ -137,14 +143,19 @@ font-weight: 400;
 }
 
 /* WORKING ON THE USERS SIGN UP ANS LOG IN */
-.main{ margin-top: 50px;
-    width: 350px;
-    height: 500px;
-    background: #000;
-    overflow: hidden;
-    display:none ;
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;}
+
+    .main{
+        margin: 50px auto;
+        width: 350px;
+        height: 500px;
+        background: #000;
+        overflow: hidden;
+        display:flex ;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;}
+
 
  #chk{
     display:none ;
@@ -246,14 +257,18 @@ input{
 }
 
 /*****VENDOR**************/
-.vendor{ margin-top: 50px;
-    width: 350px;
-    height: 600px;
-    background: #000;
-    overflow: hidden;
-    display:none ;
-    border-radius: 10px;
-    box-shadow: 5px 20px 50px #000;}
+
+    .vendor{
+        margin: 10px auto;
+        width: 350px;
+        height: 600px;
+        background: #000;
+        overflow: hidden;
+        display:none ;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;}
+
+
 
  #akh{
     display:none ;

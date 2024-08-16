@@ -13,22 +13,26 @@
 <ul>
   <li><button id="userbtn"  onclick="showUserForm()">User</button></li>
 <li><button id="vendorbtn"  onclick="showVendorForm()" >Vendor</button></li>
- <li><button id="browser" onclick="window.location.href='landing page/landingpagemain.html' ">Explore</button></li> 
+ <li><a href="../landing page/landingpagemain.html"><button>Explore</button></a></li> 
 </ul>    
 </nav>
 
+<<<<<<< HEAD
+ 
+<section class="hero">
+=======
   
 <section class="hero ">
+>>>>>>> 65dcbe5df0572d641cedd82c5c2145c51970c4fe
   <h1>Welcome To Shop.co</h1>
   <div class="text">
 <p id="auto-write"></p>
 </div>  
-<div class="btn"> <button id="userbtn user"onclick="window.location.href='landing page/landingpagemain.html'"  >Explore</button> </div>
+<a href="../landing page/landingpagemain.html"  class="btn"><button>Explore</button></a> 
 </section>
 
 
-<!---woking on sign in and up for the user-->
-<!---------sign up for users-->
+
 <div class="main" id="user-form">
   <input type="checkbox" id="chk" aria-hidden="true">
 
@@ -61,6 +65,7 @@
   <input type="checkbox" id="akh" aria-hidden="true">
 
   <div class="v-signup">
+    <select name="" id="">
 <form id="vendor-signup-f">
 <label for="akh" aria-hidden="true">Sign up</label>
 <input type="text" name="txt" placeholder="Businss Name" required>
@@ -70,22 +75,30 @@
 <input type="text" name="address" placeholder="Business Address" required>
 <h4 id="Vsignup-error"     class="form-error"  style=" color: red; font-size: medium;  display: none;">kindly fill the form accurately</h4>
     <a onclick="vendorSn()" >Vendor Sign up</a>
-</form>
+</form> </select>
   </div>
 <!--------VENDOR LOG IN-->
-<div class="v-login">
+<div class="v-login"> <select name="" id="">
 <form id="vendor-login-f">
   <label for="akh" aria-hidden="true">Log in</label>
 <input type="email" name="email" placeholder="Business Email" required  style="background-color: #000;">
 <input type="password" name="password" placeholder="Password" required style="background-color: #000;" >
 <h4 id="Vlogin-error"    class="form-error"  style=" color: red; font-size: medium; display: none;">kindly fill the form accurately</h4>
 <a onclick="vendorln()"  style="background-color: #000;  color: #fff;" >Vendor Log in</a>
-</form>
+</form>  
 </div>
   
 </div>
 
-<!----working on the form validaion and pop up logic---------------->
+
+
+
+
+
+
+
+
+
 
 <script src="login.js"></script>
  
